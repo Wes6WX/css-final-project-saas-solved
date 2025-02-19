@@ -6,5 +6,266 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Saas company</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <img
+          class="logo-front"
+          src="./assets/logos/logo-front.svg"
+          alt="Official Front logo"
+        />
+        <div class="nav-links">
+          <span><a href="#top">Home</a></span>
+          <span><a href="#features" class="blue">Features</a></span>
+          <span><a href="#learn">Learn</a></span>
+          <span><a href="#pricing">Pricing</a></span>
+          <span><a href="#hire-us">Hire us</a></span>
+          <button>Buy Now</button>
+        </div>
+      </nav>
+      <div class="top">
+        <div class="opener">
+          <h1>Empowering teams with the freedom</h1>
+          <p>Own the unlimited power of the web development</p>
+          <div class="button-grouping">
+            <button><span class="symbol-play">⏵</span> Play Video</button>
+            <span class="blue">Learn more</span>
+          </div>
+        </div>
+        <div class="logos">
+          <img src="./assets/logos/google.png" alt="Google logo" />
+          <img src="./assets/logos/atlassian.png" alt="Atlassian logo" />
+          <img src="./assets/logos/asana.png" alt="Asana logo" />
+          <img src="./assets/logos/paypal.jpg" alt="Paypal logo" />
+          <img src="./assets/logos/weave.png" alt="Weave logo" />
+          <img src="./assets/logos/calendar.png" alt="Calendar logo" />
+          <img src="./assets/logos/google-ads.png" alt="Google ads logo" />
+        </div>
+      </div>
+    </header>
+    <section id="features" class="features">
+      <h2>Why front?</h2>
+      <p>
+        Front is an incredibly beautiful, fully responsive , and mobile-first
+        projects on the web - it is the starting point for creative sites
+      </p>
+      <div class="dots">
+        <div class="dot-grouping">
+          <div class="dot blue">⏺</div>
+          <div class="dot-label">Basic elements</div>
+        </div>
+        <hr />
+        <div class="dot-grouping">
+          <div class="dot blue">⏺</div>
+          <div class="dot-label">Components</div>
+        </div>
+        <hr />
+        <div class="dot-grouping">
+          <div class="dot blue">⏺</div>
+          <div class="dot-label">Combined components</div>
+        </div>
+        <hr />
+        <div class="dot-grouping">
+          <div class="dot blue">⏺</div>
+          <div class="dot-label">Page layouts</div>
+        </div>
+      </div>
+    </section>
+    <section class="pricing">
+      <h2>Pricing</h2>
+      <p>No additional costs. Pay for what you use</p>
+      <div class="price-cards">
+        <div class="cardL">
+          <div class="card-head">
+            <span>59</span>
+            <p>/ mo</p>
+          </div>
+          <hr />
+          <p>
+            Start your Front business now. 100% guaranteed money back. No
+            questions asked.
+          </p>
+          <div class="button-grouping">
+            <button><span class="symbol-play">⏵</span> Play Video</button>
+            <p class="tiny-text">No credit card required.</p>
+          </div>
+        </div>
+        <div class="four-card-set">
+          <div class="cardS">
+            <img
+              src="./assets/images/components.svg"
+              alt="Final piece of the puzzle"
+            />
+            <h3>Hundreds of components</h3>
+            <p>
+              Achieve maximum productivity with minimum effort with Front and
+              create robust Limitless products.
+            </p>
+          </div>
+          <div class="cardS">
+            <img src="./assets/images/images.svg" alt="Image of diamond" />
+            <h3>Images included</h3>
+            <p>
+              Images included We made custom license for all our premium images
+              in the front
+            </p>
+          </div>
+          <div class="cardS">
+            <img src="./assets/images/cancel.svg" alt="Image of price tag" />
+            <h3>Cancel anytyme <button>sketch</button></h3>
+            <p>If it's not for you, just cancel, no hidden cots or fees.</p>
+          </div>
+          <div class="cardS">
+            <img
+              src="./assets/images/moneyback.svg"
+              alt="Hand holding bag of money"
+            />
+            <h3>Money back</h3>
+            <p>100% guarateed money back. No questions asked.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hire-us">
+      <div class="hire-words">
+        <div class="hire-part-1">
+          <h2>Hire Us</h2>
+          <p>Whatever your goal - we will get you there</p>
+          <hr />
+          <q
+            >I love front! I love the ease of use, I love the fact that I have
+            total creative freedom...</q
+          >
+        </div>
+        <div class="hire-part-2">
+          <h3>Charlotte Moore</h3>
+          <p class="small-text">Head of Commercials, Slack</p>
+          <img src="./assets/images/man_one.jpg" alt="Picture of man" />
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="#">
+          <h3>Fill out the form and we'll be in touch as soon as possible</h3>
+          <input
+            id="first-name"
+            name="first-name"
+            class="name"
+            type="text"
+            placeholder="First name"
+            required
+          />
+          <input
+            id="last-name"
+            name="last-name"
+            class="name"
+            type="text"
+            placeholder="Last name"
+            required
+          />
+          <input
+            id="email"
+            name="email"
+            class="email"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <select name="budget" id="budget" required>
+            <option value="" selected disabled>Budget</option>
+            <option value="over1000">Over $1000</option>
+            <option value="500-1000">$500-$1000</option>
+            <option value="under500">Under $500</option>
+          </select>
+          <select name="country" id="country" required>
+            <option value="" selected disabled>Country</option>
+            <option value="USA">United States</option>
+            <option value="USAterritory">U.S. territories</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea
+            name="additional-info"
+            id="additional-info"
+            rows="6"
+            cols="50"
+            placeholder="Tell us more about your project, needs, and timeline, please..."
+          ></textarea>
+          <div class="marketing-set">
+            <input
+              type="checkbox"
+              name="marketing-option"
+              id="marketing-option"
+            />
+            <label for="marketing-option"
+              >Yes, I'd like to receive occasional marketing emails from Front.
+              I have the right to opt out at any time.</label
+            >
+          </div>
+          <div class="pp">
+            <span class="policy"><a href="#">View privacy policy</a></span>
+            <span class="policy blue"><a href="#">View privacy policy</a></span>
+          </div>
+          <input type="submit" value="Get Started" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="contact-info">
+        <img
+          class="logo-front"
+          src="./assets/logos/logo-front.svg"
+          alt="Official Front logo"
+        />
+        <div class="address">
+          <span>➤</span>153 Williamson Plaza, Maggieberg
+        </div>
+        <div class="phone blue"><span>📞</span>+1 (062) 109-9222</div>
+      </div>
+      <div class="footer-lists">
+        <div class="footer-list">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li>
+              <a href="#">Career</a> <span class="hiring">We're hiring</span>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Hire us</a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <h3>Features</h3>
+          <ul>
+            <li><a href="#">Press</a></li>
+            <li><a href="#" class="blue">Release notes</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Pricong</a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <h3>Documentation</h3>
+          <ul>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Tech Requirements</a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <h3>Resources</h3>
+          <ul>
+            <li>
+              <span class="symbol-i">ℹ</span>
+              <a href="#">Help</a>
+            </li>
+            <li>
+              <span class="symbol-acc">👤</span>
+              <a href="#">Your Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
