@@ -33,9 +33,23 @@ nav {
   width: 175px;
   height: 52px;
 }
+.menu {
+  display: grid;
+}
+ul {
+  list-style: none;
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
-.nav-links span {
-  padding: 0 10px;
+li:hover:not(:has(button)),
+.bars:hover,
+.policy:hover {
+  background-color: #2474ff50;
+  opacity: 0.8;
 }
 
 a {
@@ -47,14 +61,25 @@ a {
   color: rgb(0, 130, 255);
 }
 
+hr {
+  width: 100%;
+}
+
 button,
 input[type="submit"] {
   color: white;
   background-color: rgb(0, 130, 255);
-  border: none;
+  border: 1px solid white;
   border-radius: 30px;
   padding: 15px 25px;
   width: fit-content;
+}
+.buyButton:hover,
+.playButton:hover,
+input[type="submit"]:hover {
+  color: rgb(0, 130, 255);
+  background-color: white;
+  border-color: rgb(0, 130, 255);
 }
 
 h3 button {
@@ -63,11 +88,23 @@ h3 button {
   font-weight: 700;
 }
 
+.menuButton {
+  border: none;
+  padding: 0 6px;
+  background-color: white;
+  font-size: 30px;
+}
+
+[aria-controls="menu-list"] {
+  display: none;
+}
+
 p,
 li,
 label,
 .address,
-.nav-links span {
+.menuButton,
+.menu-list span {
   color: #767676;
   line-height: 1.5;
 }
@@ -84,12 +121,11 @@ h1 {
 .top {
   display: flex;
   justify-content: space-between;
-  gap: 150px;
+  gap: 200px;
   background-image: url("../assets/bg/background-top.svg");
-  background-position: top;
-  background-size: 1024px 100%;
+  padding: 100px 30px;
+  background-size: auto 500px;
   background-repeat: no-repeat;
-  padding: 0 30px;
 }
 .opener {
   display: flex;
@@ -107,9 +143,9 @@ h1 {
 .logos {
   display: grid;
   gap: 30px 50px;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  padding: 100px 0;
+  align-self: center;
 }
 .logos img {
   position: relative;
@@ -133,9 +169,16 @@ h1 {
 .logos img:nth-child(4) {
   left: -90px;
 }
+.logos img:nth-child(5) {
+  left: 50px;
+}
 .logos img:nth-child(6) {
   bottom: -130px;
 }
+.logos img:last-child {
+  left: 60px;
+}
+
 @keyframes from-above {
   0% {
     transform: translateY(-300%);
@@ -171,7 +214,6 @@ h1 {
   position: relative;
   bottom: 27px;
   z-index: -1;
-  width: 100%;
   margin: auto;
   opacity: 0.25;
 }
@@ -203,15 +245,18 @@ h1 {
 }
 .price-cards {
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 .cardL {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  flex: 1;
-  padding: 60px 30px;
-  box-shadow: 0 10px 10px 5px #c0c0c0;
+  flex: 2;
+  padding: 60px 45px;
+  transition: all 0.3s ease-out;
+}
+.cardL:hover {
+  box-shadow: 0 5px 20px 5px #ddd;
 }
 .four-card-set {
   display: flex;
@@ -219,7 +264,7 @@ h1 {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  flex: 2;
+  flex: 3;
 }
 .cardS {
   width: 40%;
@@ -279,7 +324,7 @@ form {
   padding: 40px;
   display: grid;
   gap: 20px;
-  grid-template-rows: repeat(9, auto);
+  grid-template-rows: repeat(8, 0.5fr);
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     " header header header header"
@@ -289,7 +334,6 @@ form {
     "text text text text"
     "text text text text"
     "market market market market"
-    "pp pp pp pp"
     ". button button .";
 }
 form h3 {
@@ -319,16 +363,21 @@ textarea {
   gap: 20px;
   align-items: start;
 }
+.marketing-set label {
+  display: flex;
+  flex-direction: column;
+}
 .policy {
   text-decoration: dotted underline 3px;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+}
+.policy:first-child {
+  color: #767676;
 }
 .pp {
   display: flex;
-  grid-area: pp;
+  gap: 30px;
+  width: 100%;
 }
 input[type="submit"] {
   grid-area: button;
@@ -347,7 +396,6 @@ textarea {
 
 footer {
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
   padding-top: 0;
 }
@@ -359,7 +407,6 @@ footer .logo-front {
 footer li,
 .address,
 .phone {
-  list-style: none;
   line-height: 2;
   font-size: 14px;
 }
@@ -397,6 +444,10 @@ footer li,
   padding: 1px;
   font-size: 16px;
 }
+.playButton:hover .symbol-play {
+  color: white;
+  background-color: rgb(0, 130, 255);
+}
 .symbol-acc,
 .symbol-i {
   border: 1px solid #767676;
@@ -410,4 +461,144 @@ footer li,
   font-size: 12px;
   border: none;
   background-color: #767676;
+}
+
+@media (max-width: 1023px) {
+  .menu-list {
+    display: none;
+  }
+  [aria-controls="menu-list"] {
+    display: block;
+  }
+  .top {
+    flex-direction: column;
+    padding: 50px 30px 10px;
+    text-align: center;
+  }
+  .opener {
+    align-items: center;
+  }
+  h1 {
+    max-width: max-content;
+  }
+  .logos {
+    gap: 10px 150px;
+  }
+  .logos img[src*="."] {
+    animation: none;
+  }
+
+  .cardL {
+    transition: none;
+  }
+  .price-cards {
+    flex-direction: column;
+  }
+  .cardL {
+    align-items: center;
+  }
+
+  .hire-us {
+    flex-direction: column;
+  }
+  .hire-words {
+    flex-direction: row;
+  }
+  .hire-part-1 {
+    flex: 2;
+  }
+  .hire-part-2 {
+    flex: 1;
+  }
+  .form-container {
+    padding: 30px;
+  }
+
+  .footer-lists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  nav,
+  .price-cards,
+  .hire-us,
+  footer {
+    padding: 15px;
+  }
+
+  .top {
+    gap: 100px;
+  }
+  .logos {
+    gap: 5px;
+    align-self: normal;
+  }
+  .logos img:nth-child(-n + 2) {
+    left: -15px;
+  }
+  .logos img:nth-child(-n + 3) {
+    top: -30px;
+  }
+  .logos img:nth-child(4) {
+    left: -5px;
+  }
+  .logos img:nth-child(6) {
+    bottom: -90px;
+  }
+
+  .features hr {
+    display: none;
+  }
+  .dots {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  .dot-grouping {
+    display: flex;
+    gap: 40px;
+  }
+
+  .four-card-set {
+    flex-direction: column;
+    align-items: start;
+  }
+  .cardS {
+    width: 100%;
+  }
+
+  .hire-words {
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+  .form-container {
+    padding: 0;
+  }
+  form {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      " header header header"
+      "firstN firstN firstN"
+      "lastN lastN lastN"
+      "email email email"
+      "budget budget budget"
+      "country country country"
+      "text text text"
+      "text text text"
+      "market market market"
+      ". button .";
+  }
+  .pp .policy.blue {
+    display: none;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-lists {
+    grid-template-columns: 1fr;
+  }
 }

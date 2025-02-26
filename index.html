@@ -14,21 +14,33 @@
           src="./assets/logos/logo-front.svg"
           alt="Official Front logo"
         />
-        <div class="nav-links">
-          <span><a href="#top">Home</a></span>
-          <span><a href="#features" class="blue">Features</a></span>
-          <span><a href="#learn">Learn</a></span>
-          <span><a href="#pricing">Pricing</a></span>
-          <span><a href="#hire-us">Hire us</a></span>
-          <button>Buy Now</button>
+        <div class="menu">
+          <button
+            id="menuButton"
+            class="menuButton"
+            aria-expanded="false"
+            aria-controls="menu-list"
+          >
+            <span class="bars">&#x2630;</span>
+          </button>
+          <ul id="menu-list" class="menu-list">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#features" class="blue">Features</a></li>
+            <li><a href="#learn">Learn</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#hire-us">Hire us</a></li>
+            <li><button class="buyButton">Buy Now</button></li>
+          </ul>
         </div>
       </nav>
-      <div class="top">
+      <div id="top" class="top">
         <div class="opener">
           <h1>Empowering teams with the freedom</h1>
           <p>Own the unlimited power of the web development</p>
           <div class="button-grouping">
-            <button><span class="symbol-play">⏵</span> Play Video</button>
+            <button class="playButton">
+              <span class="symbol-play">⏵</span> Play Video
+            </button>
             <span class="blue">Learn more</span>
           </div>
         </div>
@@ -71,7 +83,7 @@
         </div>
       </div>
     </section>
-    <section class="pricing">
+    <section id="pricing" class="pricing">
       <h2>Pricing</h2>
       <p>No additional costs. Pay for what you use</p>
       <div class="price-cards">
@@ -86,7 +98,9 @@
             questions asked.
           </p>
           <div class="button-grouping">
-            <button><span class="symbol-play">⏵</span> Play Video</button>
+            <button class="playButton">
+              <span class="symbol-play">⏵</span> Play Video
+            </button>
             <p class="tiny-text">No credit card required.</p>
           </div>
         </div>
@@ -126,7 +140,7 @@
         </div>
       </div>
     </section>
-    <section class="hire-us">
+    <section id="hire-us" class="hire-us">
       <div class="hire-words">
         <div class="hire-part-1">
           <h2>Hire Us</h2>
@@ -197,18 +211,21 @@
             />
             <label for="marketing-option"
               >Yes, I'd like to receive occasional marketing emails from Front.
-              I have the right to opt out at any time.</label
+              I have the right to opt out at any time.
+              <span class="pp">
+                <span class="policy"><a href="#">View privacy policy</a></span>
+                <span class="policy blue"
+                  ><a href="#">View privacy policy</a></span
+                >
+              </span></label
             >
           </div>
-          <div class="pp">
-            <span class="policy"><a href="#">View privacy policy</a></span>
-            <span class="policy blue"><a href="#">View privacy policy</a></span>
-          </div>
+
           <input type="submit" value="Get Started" />
         </form>
       </div>
     </section>
-    <footer>
+    <footer id="learn">
       <div class="contact-info">
         <img
           class="logo-front"
